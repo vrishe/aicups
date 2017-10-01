@@ -1,0 +1,1453 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"enemy",
+				"enemy_passengers"
+			],
+			[
+				"enemy_",
+				"enemy_elevators"
+			],
+			[
+				"write",
+				"writerDefault"
+			],
+			[
+				"make",
+				"makeArg"
+			],
+			[
+				"enumerat",
+				"enumerateIncludesOf"
+			],
+			[
+				"result_",
+				"result_old"
+			],
+			[
+				"resu",
+				"result_new"
+			],
+			[
+				"entreis",
+				"entries_incoming"
+			],
+			[
+				"tree",
+				"tree_output"
+			],
+			[
+				"entrie",
+				"entries_incoming"
+			],
+			[
+				"entir",
+				"entries_incoming"
+			],
+			[
+				"methods",
+				"methods_json"
+			],
+			[
+				"wall_wallpo",
+				"wall_wallpost_attachment"
+			],
+			[
+				"Respon",
+				"ResponseFaveGetPosts"
+			],
+			[
+				"U",
+				"user_reposted"
+			],
+			[
+				"rust",
+				"rustfmt"
+			],
+			[
+				"sub",
+				"sublime_plugin"
+			],
+			[
+				"textSet",
+				"textSetCompletionSource"
+			],
+			[
+				"re",
+				"result"
+			],
+			[
+				"PARMS",
+				"PARAMSCOUNT"
+			],
+			[
+				"TARGET",
+				"TARGETSCOUNT"
+			],
+			[
+				"TARG",
+				"TARGETSCOUNT"
+			],
+			[
+				"celeb",
+				"celebDumb"
+			],
+			[
+				"findC",
+				"findCelebSmart"
+			],
+			[
+				"findCele",
+				"findCelebDumb"
+			],
+			[
+				"cluster_",
+				"cluster_group"
+			],
+			[
+				"clus",
+				"cluster_index"
+			],
+			[
+				"cluster",
+				"cluster_sieve"
+			],
+			[
+				"clust",
+				"cluster_sieve"
+			],
+			[
+				"cluster_inde",
+				"cluster_index"
+			],
+			[
+				"cluste",
+				"clusters_current_len"
+			],
+			[
+				"grou",
+				"grouping_suit"
+			],
+			[
+				"group",
+				"grouping_kind_current_len"
+			],
+			[
+				"line_",
+				"lines_count"
+			],
+			[
+				"lin",
+				"lines_buffer"
+			],
+			[
+				"lines",
+				"lines_count"
+			],
+			[
+				"line",
+				"lines_count"
+			],
+			[
+				"lines_",
+				"lines_count"
+			],
+			[
+				"HAND",
+				"HAND_TYPE_UNKNOWN"
+			],
+			[
+				"compa",
+				"comparator"
+			],
+			[
+				"compare",
+				"compareHands"
+			],
+			[
+				"Poker",
+				"PokerHand"
+			],
+			[
+				"TY",
+				"HAND_TYPE_POKER"
+			],
+			[
+				"str",
+				"straight_flush"
+			],
+			[
+				"sequence_",
+				"sequence_current"
+			],
+			[
+				"grop",
+				"grouping_kind_current"
+			],
+			[
+				"sequen",
+				"sequence_current"
+			],
+			[
+				"sequ",
+				"sequence_longest"
+			],
+			[
+				"card",
+				"card_groups"
+			],
+			[
+				"gro",
+				"grouping_kind_current"
+			],
+			[
+				"card_",
+				"card_groups"
+			],
+			[
+				"sequence",
+				"sequence_longest"
+			],
+			[
+				"flush",
+				"flush_suit"
+			],
+			[
+				"flus",
+				"flush_suit"
+			],
+			[
+				"time_",
+				"time_total"
+			],
+			[
+				"card_kin",
+				"card_kind_b"
+			],
+			[
+				"card_kind_",
+				"card_kind_a"
+			],
+			[
+				"card_ki",
+				"card_kind_a"
+			],
+			[
+				"seqeu",
+				"sequence_a"
+			],
+			[
+				"hand_esti",
+				"hand_estimate_b"
+			],
+			[
+				"hand_e",
+				"hand_estimate_a"
+			],
+			[
+				"getHand",
+				"getHandSequence"
+			],
+			[
+				"hand_asse",
+				"hand_aasessment"
+			],
+			[
+				"hand",
+				"handAssessment"
+			],
+			[
+				"sequences",
+				"sequences_lookup"
+			],
+			[
+				"seque",
+				"sequence_last"
+			],
+			[
+				"card_pre",
+				"card_previous_kind"
+			],
+			[
+				"is_",
+				"is_flush"
+			],
+			[
+				"get",
+				"getHighestCombination"
+			],
+			[
+				"getop",
+				"GetoptError"
+			],
+			[
+				"MMMove",
+				"MMMoveMoney"
+			],
+			[
+				"MMMo",
+				"MMMoveMoney"
+			],
+			[
+				"hist_perm",
+				"hist_permuted_inv"
+			],
+			[
+				"hist_",
+				"hist_permuted_inv"
+			],
+			[
+				"hist_ci",
+				"hist_ciphered_inv"
+			],
+			[
+				"hist_per",
+				"hist_permuted_inv"
+			],
+			[
+				"in",
+				"inverse_histogram"
+			],
+			[
+				"TEXT_",
+				"TEXT_PERMUTED"
+			],
+			[
+				"mapping",
+				"mapping_direct_reduced"
+			],
+			[
+				"crac",
+				"crack_cipher"
+			],
+			[
+				"ci",
+				"cipherText"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "strategy/strategy.py",
+			"settings":
+			{
+				"buffer_size": 2511,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "strategy/strategy_utils.py",
+			"settings":
+			{
+				"buffer_size": 1217,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "clients/python2_client/client/core/base_strategy.py",
+			"settings":
+			{
+				"buffer_size": 220,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "localrunner/world/core/world.py",
+			"settings":
+			{
+				"buffer_size": 3753,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "localrunner/world/core/game_objects/building.py",
+			"settings":
+			{
+				"buffer_size": 3822,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "localrunner/world/core/api.py",
+			"settings":
+			{
+				"buffer_size": 3420,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "localrunner/world/core/game_objects/elevator.py",
+			"settings":
+			{
+				"buffer_size": 6617,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "clients/python2_client/client/core/api.py",
+			"settings":
+			{
+				"buffer_size": 3725,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "localrunner/world/core/settings.py",
+			"settings":
+			{
+				"buffer_size": 1253,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Rust/Rust.sublime-build",
+					""
+				],
+				[
+					"Packages/Rust/Rust.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/Rust/Rust.sublime-build",
+				"Run"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 490.0,
+		"last_filter": "Disa",
+		"selected_items":
+		[
+			[
+				"Disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"SS Pla",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"Disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"ss plain",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"Filter include",
+				"Filter Lines: Include lines with String"
+			],
+			[
+				"Filter ",
+				"Filter Lines: Include lines with String"
+			],
+			[
+				"Filter",
+				"Filter Lines: Include lines with String"
+			],
+			[
+				"PLAIN",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"SS XML",
+				"Set Syntax: XML"
+			],
+			[
+				"PLain",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"Plain",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"Toggle Hex",
+				"HexViewer: Toggle Hex View"
+			],
+			[
+				"Hex",
+				"HexViewer: Toggle Hex View"
+			],
+			[
+				"Preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"Makrd",
+				"Set Syntax: Markdown"
+			],
+			[
+				"Mark",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"Exclude",
+				"Filter Lines: Exclude lines with String"
+			],
+			[
+				"Include ",
+				"Filter Lines: Include lines with String"
+			],
+			[
+				"Exclude ",
+				"Filter Lines: Exclude lines with Regex"
+			],
+			[
+				"include ",
+				"Filter Lines: Include lines with String"
+			],
+			[
+				"SS PLA",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"Incude ",
+				"Filter Lines: Include lines with String"
+			],
+			[
+				"SS Plain",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"SS Diff",
+				"Set Syntax: Diff"
+			],
+			[
+				"Exclude W",
+				"Filter Lines: Exclude lines with Regex"
+			],
+			[
+				"Exclude Re",
+				"Filter Lines: Exclude lines with Regex"
+			],
+			[
+				"SS Text",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"SS xml",
+				"Set Syntax: XML"
+			],
+			[
+				"Unfo",
+				"Code Folding: Unfold All"
+			],
+			[
+				"Snipp",
+				"Snippet: html"
+			],
+			[
+				"Synta HTML",
+				"Set Syntax: HTML"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Install ",
+				"Package Control: Install Package"
+			],
+			[
+				"Markdo",
+				"Set Syntax: Markdown"
+			],
+			[
+				"",
+				"Filter Lines: Include lines with String"
+			],
+			[
+				"Packages",
+				"Package Control: List Packages"
+			],
+			[
+				"Diff",
+				"Set Syntax: Diff"
+			],
+			[
+				"Install P",
+				"Package Control: Install Package"
+			],
+			[
+				"Remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Selection",
+				"Rot13 Selection"
+			],
+			[
+				"syn ba",
+				"Set Syntax: Batch File"
+			],
+			[
+				"Filter\t",
+				"Filter Lines: Filter With Regex"
+			],
+			[
+				"InstallP\t",
+				"Package Control: Install Package"
+			],
+			[
+				"Packa\t",
+				"Install Package Control"
+			]
+		],
+		"width": 609.0
+	},
+	"console":
+	{
+		"height": 410.0,
+		"history":
+		[
+			"cargo",
+			"sublime.log_commands(True)",
+			"sublime.log_commands(true)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/strategy",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/clients/python2_client",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/clients/python2_client/client",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/clients/python2_client/client/core"
+	],
+	"file_history":
+	[
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/localrunner/world/run.py",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/clients/python2_client/client/core/api.py",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/build/run.py",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/clients/python2_client/client/run.py",
+		"/D/Users/vladrishe/Documents/Problems/Misc - Replacement and Permutation/crack_cipher.py",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/chunk000_game.js",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/strategy/strategy_constants.py",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/repl.sh",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/Makefile",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/copy_source.sh",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/build/.tmp_install/strategy.py",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/build/aicups/strategy.py",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/menu.repl",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/strategy/strategy_utils.py",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/baseline/python2_client/strategy.py",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/localrunner/visualizer/js/mechanic/game_object.js",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/localrunner/visualizer/js/utils.js",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/localrunner/visualizer/js/init.js",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/localrunner/visualizer/js/main.js",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/chunk067_game.js",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/localrunner/visualizer/js/mechanic/passenger.js",
+		"/D/Soft/Sublime Text 3/Data/Packages/User/selected_rotary_shift.py",
+		"/D/Soft/Sublime Text 3/Data/Packages/User/selected_binary_inversion.py",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/localrunner/visualizer/game.js",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/chunk001_game.js",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/clients/java1.8_client/README.md",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/clients/java1.8_client/client/src/main/java/core/Client.java",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/clients/java1.8_client/client/src/main/java/core/BaseStrategy.java",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/clients/java1.8_client/client/src/main/java/core/API/MessagesInterface.java",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/clients/cpp11_client/client/core/client.h",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App.iOS/Modules/ThemeModule.cs",
+		"/D/Users/Default/.android/avd/Pixel_XL_API_21.avd/config.ini",
+		"/D/Users/Default/.android/avd/Pixel_XL_API_21.avd/hardware-qemu.ini",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/strategy/strategy.py",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/baseline/python3_client/strategy.py",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/clients/python2_client/client/core/base_strategy.py",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/strategy/constants.py",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/build/core/api.py",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/strategy/utils.py",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/build/core/__init__.py",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/clients/c_sharp_client/client/core/api.cs",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/clients/python2_client/client/core/__init__.py",
+		"/D/Users/vladrishe/Documents/Problems/exam-2012 - Exercise 5/solution.py",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App.Droid/LinkerCommon.xml",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App.Droid.Qtmb/DigitalPlay.App.Droid.Qtmb.csproj",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App.Droid.Racq/DigitalPlay.App.Droid.Racq.csproj",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App.Droid.Rams/DigitalPlay.App.Droid.Rams.csproj",
+		"/X/digitalplay/src/DigitalPlay.App.Droid.Rams/DigitalPlay.App.Droid.Rams.csproj",
+		"/D/Users/vladrishe/Documents/Projects/android/proLiteracy/app/proguard-rules-release.pro",
+		"/D/Users/vladrishe/Documents/Projects/android/proLiteracy/app/proguard-rules.pro",
+		"/D/Users/vladrishe/Documents/Projects/android/ranger/app/proguard-rules.pro",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/.gitignore",
+		"/D/Users/vladrishe/Documents/Projects/generic/CAdvanced/.gitignore",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App.Droid/Resources/values/styles.xml",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/clients/cpp11_client/client/client.pro",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/localrunner/world/requirements.txt",
+		"/D/Users/vladrishe/Documents/Projects/generic/CodeWizards/cpp-cgdk/Makefile",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/clients/python3_client/client/core/__init__.py",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/clients/cpp11_client/client/core/api.h",
+		"/D/Users/vladrishe/Documents/Projects/generic/aicups/clients/cpp11_client/client/core/base_strategy.h",
+		"/D/Soft/dev/glibc/Makefile",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/rename.repl",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App/Resources/Strings.resx",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/rename.resx",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/rename.tsv",
+		"/X/digitalplay/src/DigitalPlay.App.Droid/DigitalPlay.App.Droid.csproj",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App.Droid/DigitalPlay.App.Droid.csproj",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App.iOS.Rams/Resources/RamsStrings.Designer.cs",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App.iOS.Racq/Resources/RacqStrings.Designer.cs",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App.iOS.Qtmb/Resources/QtmbStrings.Designer.cs",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App.iOS/Controllers/ScheduledTransfers/ScheduledTransfersController.cs",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App.Droid/ViewHolders/ScheduledTransferViewHolder.cs",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App/Redux/Reducers/LoginWithPinReducer.cs",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App/Redux/Reducers/LoginReducer.cs",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App/Redux/Reducers/ApplicationReducer.cs",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App/Redux/Reducers/AddPayeeReducer.cs",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App/Redux/Reducers/AccountDetailsReducer.cs",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App.Droid.Racq/Resources/RacqStrings.resx",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App.iOS.Racq/Resources/RacqStrings.resx",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App.Droid.Qtmb/Resources/QtmbStrings.resx",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App.Droid.Rams/Resources/RamsStrings.resx",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/Strings.resx.old",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/Strings-dup.resx",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/added.log",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/missing.repl",
+		"/D/Users/vladrishe/Downloads/TSWG DP APP- Language naming patterns - Лист44.tsv",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/Strings.match",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/Strings.resx",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/Strings.repl",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App/Resources/result.txt",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App/Resources/lookup.txt",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App/Resources/index.txt",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/Strings RAMS (dup).tsv",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/Strings-RAMS-typos.repl",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App.Droid/Theme/ThemeExtensions.cs",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App.Droid/Fragments/BaseListFragment.cs",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App/Validators/TransferDescriptionInputValidator.cs",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App/Redux/Actions/Thunk/ElevateErrorAction.cs",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/Strings-RAMS-missing.txt",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/Strings-RAMS-missing.repl",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/Strings-RAMS-missing.resx",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/Strings-RAMS-missing.tsv",
+		"/D/Users/vladrishe/Downloads/result.txt",
+		"/D/Users/vladrishe/Downloads/lookup.txt",
+		"/D/Users/vladrishe/Downloads/index.tsv",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/Strings-RAMS-dup.resx",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/Strings-RAMS.resx",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/Strings-RAMS-dup.repl",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/Strings-RAMS-uniq.tsv",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/Strings-RAMS-dup.tsv",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/Strings-RAMS-uniq.repl",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App/Redux/Actions/Thunk/LoginErrorAction.cs",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App/Redux/ActionCreators/ICustomerDetailsEditResidentialAddressControllerExtensions.cs",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App.Droid/Resources/layout/ScheduledTransferListItem.axml",
+		"/D/Users/vladrishe/Downloads/blame.txt",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App/Redux/Actions/Thunk/LoginAction.cs",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App/Settings/Settings.cs",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App/Validators/MoneyAmountInputValidator.cs",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App/Redux/ActionCreators/ITransferControllerExtensions.cs",
+		"/D/Users/vladrishe/Downloads/Strings.resx.index",
+		"/D/Users/vladrishe/Downloads/Strings.resx.old.tsv",
+		"/D/Users/vladrishe/Downloads/output.txt",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/Strings-RAMS.repl",
+		"/D/Users/vladrishe/AppData/Local/Temp/Temp1_diff.zip/SampleFiles/Diff.cs.v9",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/packageandroid.sh",
+		"/D/Users/vladrishe/Downloads/log.txt",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App.Droid/ViewHolders/InterestSummaryTotalViewHolder.cs",
+		"/D/Users/vladrishe/Documents/Projects/xamarin/digitalplay/src/DigitalPlay.App.iOS/Cells/Interest Summary/InterestSummaryCell.cs"
+	],
+	"find":
+	{
+		"height": 52.0
+	},
+	"find_in_files":
+	{
+		"height": 117.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"debug",
+			"Body1",
+			"$$foe_path",
+			"^([^\\s]+)",
+			"\\\\b",
+			"\\b",
+			"^([^\\s]+)",
+			"\\t\\t\\t[-@\\w]+(?=\\s)",
+			"<data name=\\\"([^\\\"]+).+",
+			"AddressBook",
+			"ElevationCredentials",
+			"SessionTim",
+			"Welcome",
+			"Action",
+			"AccountName",
+			"^<data name=\"([^\"]+)\"[^>]+>\\s*<value>([^<]+)</value>\\s*<comment>([^<]+)</comment>\\s*</data>",
+			"AddressBookItemSave",
+			"Save to Contacts",
+			"TransferMoneyVerb",
+			"Save<",
+			"^([^\\t]+)\\t",
+			"Transactions\"",
+			"Account details",
+			"Transactions\"",
+			"ScheduledNone",
+			"None",
+			"You have no Transactions to view.",
+			"Transactions<",
+			"Load more",
+			"Load more transactions",
+			"The biller you've selected",
+			"AllAccounts",
+			"There are no eligible source accounts to display.",
+			"Password<",
+			"Loan",
+			"LoadRedraw",
+			"Please ensure sufficient",
+			"Login<",
+			"TransferMoney",
+			"ErrorLoading",
+			"There was a problem loading your",
+			"There was a problem loading your {0}.",
+			"you currenty",
+			"Need help? Call our support team on",
+			"Residential address",
+			"CANCEL",
+			"your details",
+			"NoAccountAvailable",
+			"Accounts<",
+			"AddressBookEmpty",
+			"You currently",
+			"You currently don't have any accounts.",
+			"Account Details",
+			"AllRecipients",
+			"billers",
+			"No saved",
+			"^([^\\t]+)\\t",
+			"^(?:[^\\t]+)\\t",
+			"X:\\\\digitalplay\\\\src\\\\",
+			"'\\t[^\\t]+",
+			"PhoneSupport",
+			"SettingsLabel",
+			"([^\\s]+)\\t",
+			"([^\\s]+\\t)",
+			"Account Title Name",
+			"^.+?name=\\\"([^\"]+)\\\".+?<value>([^<]+).+$",
+			"^.+?name=\\\"([^\"]+)\\\".+$",
+			"(?<!</data>)\\n",
+			"Deposit Number",
+			"Interest Payment Instructions",
+			"Minimum Account Balance",
+			"Repayment Frequency",
+			"there are ",
+			"There are",
+			"AddressBookNew",
+			"Payee has been",
+			"Payee has been successfully added",
+			"Payee has been",
+			"Payee has been successfully added",
+			"Email",
+			"Postal address",
+			"Residential address",
+			"code ",
+			"confirm it's you",
+			"warning",
+			"exceeded",
+			"Confirmed",
+			"or call our support team on {0}",
+			"Help",
+			"account has been blocked",
+			"Account Blocked",
+			"credential has expired",
+			"This credential has expired. Need Help? Call our support team on {0}",
+			"If you have forgotten your customer ID or password please contact support on {0}",
+			"Please phone for support",
+			"{0}",
+			"Set1",
+			"5",
+			"5Format",
+			"This needs more than {0}",
+			"LoginNeed",
+			"The end date must be greater than the tomorrow's date",
+			"ScheduledEndDateErrorAlternative",
+			"Insufficient details",
+			"ErrorCode",
+			"ErrorCodeRemoteMinimumNumberOfCredentialsNotMet",
+			"Insuff",
+			"LInsufficientDetailsTitle",
+			"Insuff",
+			"Insufficient details",
+			"Warning",
+			"You've",
+			"You'",
+			"Security method locked",
+			"Logout",
+			"Hello",
+			"Hello, you",
+			"Hello, you went away for a moment, so we logged you out to protect your privacy.",
+			"End date should be greater than start date.",
+			"BillerAccount",
+			"Accounts",
+			"disclaimer",
+			"To protect your",
+			"To protect your privacy, we recommend you create a unique PIN and ensure that you do not save your PIN on this device.If your registered device is lost or stolen, or you think your PIN has been compromised, please call us immediately.",
+			"Choose a Stronger PIN",
+			"ContactDetailsSet1",
+			"This needs more than {0}",
+			"Postcode should be {0} digits."
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$(FOE)",
+			"\\\\b$1\\\\b",
+			"\\b$1\\b",
+			"",
+			"\\\\b",
+			"\\\\b$1\\\\b",
+			"",
+			"$1",
+			"$3\\t$2\\t$1",
+			"\\\\b$1\\\\b ",
+			"$1\\t\\t\\t",
+			"\\t\\t\\t",
+			"",
+			"\\\\b$1\\\\b ",
+			"$1\\t$2",
+			"$1",
+			"",
+			"$1",
+			"",
+			"\\t",
+			"",
+			" PhoneSupportAction",
+			"PhoneSupportAction",
+			"\\\\b$1\\\\b ",
+			"Strings(\\\\s*\\\\.\\\\s*)$1\\\\b Strings\\$1$2",
+			"$1",
+			"",
+			"/",
+			" /",
+			" ",
+			".",
+			"$1",
+			"Strings(\\\\s*\\\\.\\\\s*)$1\\\\b Strings\\$1$2",
+			"$1",
+			"\\t",
+			"$1 $2",
+			"$1",
+			"",
+			"Strings(\\\\s*\\\\.\\\\s*)$1\\\\b Strings\\$1$2",
+			"$1\\t$2\\t$3",
+			"$1",
+			"",
+			"$1",
+			"\\\\b ",
+			"\\\\b",
+			"tree_another_data",
+			"tree_one_data",
+			"Strings(\\\\s*\\\\.\\\\s*)",
+			" Strings\\$1",
+			"Strings\\$1",
+			"$1",
+			"",
+			"$1",
+			" Strings\\$1",
+			"Strings\\$1",
+			"Strings(\\\\s*\\\\.\\\\s*)",
+			" Strings\\$1",
+			" Strings$1",
+			"Strings(\\\\s*\\\\.\\\\s*)",
+			"$1",
+			"",
+			"Strings\\$1",
+			"Strings$1",
+			"Strings(\\\\s*\\\\.\\\\s*)",
+			"Strings(\\s*\\\\.\\s*)",
+			"Strings(\\s*\\.\\s*)",
+			"Strings\\s*\\.\\s*",
+			"Strings.",
+			"    ",
+			"ApiAddressBookRecipientPut",
+			"ApiAddressBookBsbGet",
+			"ApiAddressBookBillerSummaryGet",
+			"    ",
+			"$1: ,",
+			"...",
+			"%USER%",
+			" (",
+			"HasAccessor",
+			" (",
+			"Debug.ApiStubs",
+			"",
+			"\\n",
+			"z",
+			"",
+			"{{#",
+			"{{",
+			"scope",
+			"\"",
+			"input_file",
+			"\"$ref\": \"./$1#$2\"",
+			"    \"wall_wallpost_attachment_$1\": {\n      \"type\": \"object\",\n      \"allOf\": [\n        {\n          \"$ref\": \"#/definitions/wall_wallpost_attachment\"\n        },\n        {\n          $0\n        }\n      ]\n    },",
+			"$0\\n",
+			"",
+			" ",
+			"",
+			"ret_",
+			"</color>",
+			"",
+			"@color/$0",
+			"@color/",
+			"@android:color/transparent",
+			",",
+			"\\",
+			"<AndroidResource Include=\"$1\" />",
+			"_isDisabled",
+			"shiftVector",
+			"shiftVectorCompletionSource",
+			"\"$1\": \"$2\",",
+			"[$1]",
+			"@",
+			".",
+			",",
+			".",
+			"public static",
+			"string.Empty",
+			"\\n$0",
+			"",
+			"],[",
+			",",
+			"],[",
+			",",
+			"],[",
+			",",
+			"],[",
+			" ",
+			"],[",
+			",",
+			"warm-up_files"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "strategy/strategy.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2511,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1170,
+								1170
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 310.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "strategy/strategy_utils.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1217,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								135,
+								135
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 47.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "clients/python2_client/client/core/base_strategy.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 220,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								220,
+								220
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "localrunner/world/core/world.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3753,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2116,
+								2116
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 647.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "localrunner/world/core/game_objects/building.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3822,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2036,
+								2036
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 39.0,
+						"translation.y": 242.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "localrunner/world/core/api.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3420,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 5.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "localrunner/world/core/game_objects/elevator.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6617,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1498,
+								1498
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 625.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "clients/python2_client/client/core/api.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3725,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								829,
+								829
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 153.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "localrunner/world/core/settings.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1253,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								987,
+								987
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 202.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 44.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 352.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.hex_viewer_inspector":
+	{
+		"height": 297.0
+	},
+	"pinned_build_system": "Packages/Rust/Rust.sublime-build",
+	"project": "python2.sublime-project",
+	"replace":
+	{
+		"height": 53.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 294.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

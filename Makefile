@@ -19,8 +19,13 @@ foe: build;
 	cp -r ./baseline/$(CLIENT)/* $(FOE)/core
 
 install: clean build;
+	tmp=$(OUTPUT)/.tmp_install;\
+	mkdir $$tmp;\
+	find ./strategy/ -type f -exec ./copy_source.sh '{}' "$$tmp" ';';\
 	dst=$(realpath $(OUTPUT))/$(notdir $(PWD)).zip;\
-	cd ./strategy && zip -r $$dst .;\
+	cd $$tmp && $(PYTHON_VERSION) -m compileall ./ \
+		&& find . -type f -iname '*.py[co]' -exec rm -f '{}' ';' \
+		&& zip -r $$dst .
 
 run: clean foe;
 	(python2 ./localrunner/world/run.py &) && sleep 1
