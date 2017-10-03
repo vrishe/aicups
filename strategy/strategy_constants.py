@@ -9,6 +9,8 @@ class _ElevatorConfigEnum(EnumBase):
 		self.__dict__['delay_operation']=40
 		self.__dict__['duration_doors_close']=100
 		self.__dict__['duration_doors_open']=100
+		self.__dict__['passengers_avg']=10
+		self.__dict__['passengers_max']=20
 		self.__dict__['ticks_per_floor']=50
 ElevatorConfig=_ElevatorConfigEnum()
 
@@ -16,10 +18,17 @@ class _ElevatorStateEnum(EnumBase):
 	def __init__(self):
 		self.__dict__['waiting']=0
 		self.__dict__['moving']=1
-		self.__dict__['openinig']=2
+		self.__dict__['opening']=2
 		self.__dict__['filling']=3
 		self.__dict__['closing']=4
 ElevatorState=_ElevatorStateEnum()
+
+class _GameConfigEnum(EnumBase):
+	def __init__(self):
+		self.__dict__['delay_passenger_spawn']=20
+		self.__dict__['passenger_delivery_floor_cost']=10
+		self.__dict__['duration_passenger_spawn']=2000
+GameConfig=_GameConfigEnum()
 
 class _PassengerStateEnum(EnumBase):
 	def __init__(self):
@@ -36,10 +45,3 @@ class _PlayerTypeEnum(EnumBase):
 		self.__dict__['first']='FIRST_PLAYER'
 		self.__dict__['second']='SECOND_PLAYER'
 PlayerType=_PlayerTypeEnum()
-
-
-class _PassengerFloorCostEnum(EnumBase):
-	def __init__(self):
-		self.__dict__['my']=10
-		self.__dict__['enemy']=20
-PassengerFloorCost=_PassengerFloorCostEnum()

@@ -2,6 +2,7 @@ PYTHON_VERSION := python2
 CLIENT := $(PYTHON_VERSION)_client
 OUTPUT := ./build
 FOE := $(OUTPUT)/.foe
+TEST := strategy_utils.py strategy.py
 
 .PHONY: clean run
 
@@ -31,3 +32,11 @@ run: clean foe;
 	(python2 ./localrunner/world/run.py &) && sleep 1
 	($(PYTHON_VERSION) $(FOE)/run.py &) && sleep 1
 	$(PYTHON_VERSION) $(OUTPUT)/run.py
+
+test: clean build;
+	cd ./build/core;\
+	for file in $(TEST); do\
+		echo "TESTING $$file...";\
+		python2 "$$file";\
+		echo;\
+	done

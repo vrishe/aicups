@@ -16,7 +16,7 @@ class ElevatorControllerBase(object):
 			my_elevators, my_passengers, enemy_elevators, enemy_passengers):
 		pass
 
-class ElevatorStateSentryBase(object):
+class StateSentryBase(object):
 	def __init__(self, timer):
 		self.state=None
 		self.__t0=0
@@ -54,6 +54,9 @@ class _Timer(object):
 
 		self.__actions.setdefault(tick, []).append(action)
 
+	def perform_delayed(self, ticks, action):
+		self.perform_at(self.ticks+ticks, action)
+
 	def perform_next(self, action):
 		self.perform_at(self.ticks, action)
 
@@ -90,26 +93,40 @@ def timefunc(f):
 
 
 # Module tests below
+def _run_test_func(f, args):
+	f(args); print '{} passed'.format(f.__name__)
+
 if __name__ == '__main__':
 	import sys
 
-	def test_elevator_controller_base(args):
-		controller=ElevatorControllerBase()
+	def test_timer(args):
+		timer=_Timer()
 
-		@ElevatorControllerBase.register
-		class _TestControllerA(ElevatorControllerBase): pass
-		@ElevatorControllerBase.register
-		class _TestControllerB(ElevatorControllerBase): pass
+		class _Counter(object):
+			def __init__(self):
+				self.value=0
+			def increase(self):
+				self.value=self.value+1
 
-		assert len(ElevatorControllerBase.controllers) == 2
-		assert ElevatorControllerBase.from_name('_TestControllerA').__class__ is _TestControllerA
-		assert ElevatorControllerBase.from_name('_TestControllerB').__class__ is _TestControllerB
+		counter=_Counter()
+		timer.perform_at(0, counter.increase)
+		assert timer.ticks == 1
+		assert counter.value == 1
 
-		print "test_elevator_controller_base passed"
+		timer.perform_at(1, counter.increase)
+		timer.perform_at(1, counter.increase)
+		timer.proceed_with_tick()
+		assert timer.ticks == 2
+		assert counter.value == 3
 
-	def test_elevator_state_sentry_base(args):
-		timer=Timer()
-		sentry=ElevatorStateSentryBase(timer);
+		timer.perform_at(2, counter.increase)
+		timer.proceed_with_tick()
+		assert timer.ticks == 3
+		assert counter.value == 4
+
+	def test_state_sentry_base(args):
+		timer=_Timer()
+		sentry=StateSentryBase(timer);
 
 		assert not sentry.state
 
@@ -147,38 +164,21 @@ if __name__ == '__main__':
 		sentry.synchronize_with(elevator)
 		assert sentry.get_ticks_passed() == 0
 
-		print "test_elevator_state_sentry passed"
+	def test_elevator_controller_base(args):
+		controller=ElevatorControllerBase()
 
-	def test_timer(args):
-		timer=Timer()
+		@ElevatorControllerBase.register
+		class _TestControllerA(ElevatorControllerBase): pass
+		@ElevatorControllerBase.register
+		class _TestControllerB(ElevatorControllerBase): pass
 
-		class _Counter(object):
-			def __init__(self):
-				self.value=0
-			def increase(self):
-				self.value=self.value+1
-
-		counter=_Counter()
-		timer.perform_at(0, counter.increase)
-		assert timer.ticks == 1
-		assert counter.value == 1
-
-		timer.perform_at(1, counter.increase)
-		timer.perform_at(1, counter.increase)
-		timer.proceed_with_tick()
-		assert timer.ticks == 2
-		assert counter.value == 3
-
-		timer.perform_at(2, counter.increase)
-		timer.proceed_with_tick()
-		assert timer.ticks == 3
-		assert counter.value == 4
-
-		print "test_timer passed"
+		assert len(ElevatorControllerBase.controllers) == 2
+		assert ElevatorControllerBase.from_name('_TestControllerA').__class__ is _TestControllerA
+		assert ElevatorControllerBase.from_name('_TestControllerB').__class__ is _TestControllerB
 
 	def test(args):
-		test_timer(args)
-		test_elevator_controller_base(args)
-		test_elevator_state_sentry_base(args)
+		_run_test_func(test_timer, args)
+		_run_test_func(test_state_sentry_base, args)
+		_run_test_func(test_elevator_controller_base, args)
 
 	sys.exit(test(sys.argv[1:]))
