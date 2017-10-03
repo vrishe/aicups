@@ -5,30 +5,40 @@ from strategy_constants import *
 from strategy_utils import *
 from base_strategy import BaseStrategy
 
+
 if not 'timefunc' in dir():
 	def timefunc(f): return f
+
 
 ## REGION Controllers
 
 @ElevatorControllerBase.register
 class DistanceAssessmentElevatorController(ElevatorControllerBase):
+	rankings={}
+	@staticmethod
+	def assign_ranking(elevator, ranking=None):
+		if not ranking:
+			ranking=DistanceAssessmentElevatorController.rankings.get(elevator.id)
+		if ranking:
+			setattr(elevator, 'rank', ranking)
+		return elevator
+
 	def run(self, strategy, elevator,
 			my_elevators, my_passengers, enemy_elevators, enemy_passengers):
-		my_passenger_waiting=next(
-			itertools.ifilter(
-				lambda p: p.state==PassengerState.waiting_for_elevator, 
-				iter(my_passengers)),
+		passenger_subject=next(
+			itertools.ifilter(lambda p: p.ex.is_waiting(), my_passengers),
 			None)
-		if not my_passenger_waiting:
+		if not passenger_subject:
 			return
 
-		elevators_unassigned=itertools.ifilter(
-			lambda e: strategy.elevator_sentries[e.id].rank is None, 
-			iter(my_elevators))
-		for elevator in elevators_unassigned:
-			my_passenger_waiting.set_elevator(elevator)
-		elevator=my_passenger_waiting.elevator
-		strategy.push_elevator_rank(elevator)
+		elevators_without_rank=itertools.ifilter(
+			lambda e: not 'rank' in e.__dict__, my_elevators)
+		for elevator in elevators_without_rank:
+			passenger_subject.set_elevator(elevator)
+		elevator=passenger_subject.elevator
+		rankings=DistanceAssessmentElevatorController.rankings
+		DistanceAssessmentElevatorController.assign_ranking(elevator,
+			rankings.setdefault(elevator.id, len(rankings)+1))
 		Timer.perform_next(
 			lambda: strategy.switch_controller_by_name(
 					elevator, 'PassengerLoadElevatorController')
@@ -49,7 +59,7 @@ class MovementElevatorController(ElevatorControllerBase):
 	def run(self, strategy, elevator,
 			my_elevators, my_passengers, enemy_elevators, enemy_passengers):
 		if elevator.state == ElevatorState.opening:
-			if strategy.elevator_sentries[elevator.id].get_ticks_passed() == 0:
+			if elevator.ex.get_ticks_passed() == 0:
 				Timer.perform_delayed(
 					ElevatorConfig.duration_doors_open,
 					lambda: strategy.switch_controller_by_name(
@@ -68,7 +78,8 @@ class MovementElevatorController(ElevatorControllerBase):
 			None)
 
 		if passenger and passenger.dest_floor != elevator.next_floor:
-			strategy.debug('Elevator #{} goes to {} floor with {} passengers on board.'.format(elevator.id, passenger.dest_floor, len(elevator.passengers)))
+			strategy.debug('Elevator #{} goes to {} floor with {} passengers on board.'
+				.format(elevator.id, passenger.dest_floor, len(elevator.passengers)))
 			elevator.go_to_floor(passenger.dest_floor)
 
 
@@ -89,26 +100,25 @@ class PassengerLoadElevatorController(ElevatorControllerBase):
 
 	def run(self, strategy, elevator,
 			my_elevators, my_passengers, enemy_elevators, enemy_passengers):
-		passengers_on_floor=strategy.get_passengers_on_floor(
-			itertools.chain(my_passengers, enemy_passengers), 
-			elevator.floor)
-
+		passengers_on_floor=itertools.ifilter(lambda p: p.from_floor==elevator.floor, 
+			itertools.chain(my_passengers, enemy_passengers))
 		if not passengers_on_floor:
 			Timer.perform_next(
 				lambda: strategy.switch_controller_by_name(
 						elevator, 'FloorAnticipationMovementElevatorController'))
 			return
 
-		passengers_map={p.id:p for p in passengers_on_floor}
+		passengers_on_floor=sorted(passengers_on_floor, 
+			key=lambda p: strategy.get_score_potential(p))
+		passengers_map={ p.id:p for p in passengers_on_floor }
 		self.passengers_incoming=filter(
 			lambda pid: PassengerLoadElevatorController.is_incoming(passengers_map[pid], elevator),
 			self.passengers_incoming)
-
 		passengers_to_invite=itertools.ifilter(
-			lambda p: p.state == PassengerState.waiting_for_elevator or p.state == PassengerState.returning, 
+			lambda p: p.ex.is_waiting_or_returning(), 
 			passengers_on_floor)
 		game_start=Timer.ticks <= GameConfig.duration_passenger_spawn
-		chart=self.distribution[strategy.elevator_sentries[elevator.id].rank] if game_start else None
+		chart=self.distribution[elevator.rank] if game_start else None
 		for p in passengers_to_invite:
 			travel=int(math.fabs(p.dest_floor-p.from_floor))
 			if not chart or travel in chart:
@@ -134,10 +144,9 @@ class PassengerLoadElevatorController(ElevatorControllerBase):
 ## END REGION Controllers
 
 
-class ElevatorStateSentry(StateSentryBase):
+class ElevatorEx(StateSentryBase):
 	def __init__(self, timer):
 		StateSentryBase.__init__(self, timer)
-		self.rank=None
 
 	# def can_invite_enemy_passenger(self):
 	# 	return self.can_operate()	and self.get_ticks_passed() >= ElevatorConfig.delay_enemy_invitation
@@ -148,9 +157,14 @@ class ElevatorStateSentry(StateSentryBase):
 	# 	return self.state == ElevatorState.waiting
 
 
-class PassengerStateSentry(StateSentryBase):
+class PassengerEx(StateSentryBase):
 	def __init__(self, timer):
 		StateSentryBase.__init__(self, timer)
+
+	def is_waiting(self):
+		return self.obj.state==PassengerState.waiting_for_elevator
+	def is_waiting_or_returning(self):
+		return self.obj.state==PassengerState.waiting_for_elevator or self.obj.state==PassengerState.returning
 
 
 class Strategy(BaseStrategy):
@@ -159,16 +173,12 @@ class Strategy(BaseStrategy):
 		BaseStrategy.__init__(self, _DebugLogWrapper(debug), type)
 		self.info=self.debug
 		# must declare here for testing
-		self.my_elevators_ranked_sequence=[]
-		self.elevator_sentries={}
-		self.passenger_sentries={}
-		
+		self.__ex=({}, {})
+
 	#@timefunc
 	def on_tick(self, my_elevators, my_passengers, enemy_elevators, enemy_passengers):
 		if Timer.ticks <= 0:
 			raise Exception('Timer\'s got screwed up!')
-
-		elevators=itertools.chain(my_elevators, enemy_elevators)
 
 		if Timer.ticks == 1:
 			# First tick initialization
@@ -176,24 +186,14 @@ class Strategy(BaseStrategy):
 				elevator.id: DistanceAssessmentElevatorController()
 				for elevator in my_elevators
 			}
-			self.elevator_sentries={ elevator.id: ElevatorStateSentry(Timer) for elevator in elevators }
-			self.my_elevators_ranked_sequence=[None]
 
-		for elevator, sentry in map(lambda e: (e, self.elevator_sentries[e.id]), elevators):
-			sentry.synchronize_with(elevator)
+		self.__update(my_elevators, my_passengers, 
+			enemy_elevators, enemy_passengers)
 		for elevator in my_elevators:
 			self.__controllers[elevator.id].run(self, elevator,
 				my_elevators, my_passengers, enemy_elevators, enemy_passengers)
 
 		Timer.proceed_with_tick()
-
-	def get_elevators_on_floor(self, elevators, floor):
-		return sorted(itertools.ifilter(lambda e: e.floor==floor, elevators),
-			key=lambda e: self.elevator_sentries[e.id].rank)
-
-	def get_passengers_on_floor(self, passengers, floor):
-		return sorted(itertools.ifilter(lambda p: p.from_floor==floor, passengers),
-			key=lambda p: self.get_score_potential(p))
 
 	def get_score_potential(self, passenger):
 		result=GameConfig.passenger_delivery_floor_cost*math.fabs(passenger.dest_floor-passenger.from_floor)
@@ -207,20 +207,25 @@ class Strategy(BaseStrategy):
 	def is_my(self, obj):
 		return obj.type == self.type
 
-	def push_elevator_rank(self, elevator):
-		rank=len(self.my_elevators_ranked_sequence)
-		self.elevator_sentries[elevator.id].rank=rank
-		self.my_elevators_ranked_sequence.append(elevator.id)
-		self.debug('Elevator #{} assigned with rank {}'.format(elevator.id, rank))
-		return rank
-
 	def switch_controller_by_name(self, elevator, name):
 		controller_old=self.__controllers.get(elevator.id, None)
+		if type(controller_old).__name__==name:
+			return controller_old	
+
 		controller_new=ElevatorControllerBase.from_name(name)
 		self.__controllers[elevator.id]=controller_new
 		self.debug('Controllers switched for elevator #{}: {} -> {}'
 			.format(elevator.id, type(controller_old).__name__, type(controller_new).__name__))
 		return controller_new
+
+	def __update(self, my_elevators, my_passengers, enemy_elevators, enemy_passengers):
+		for e in my_elevators:
+			self.__ex[0].setdefault(e.id, ElevatorEx(Timer)).synchronize_with(
+				DistanceAssessmentElevatorController.assign_ranking(e)) 
+		for e in enemy_elevators:
+			self.__ex[0].setdefault(e.id, ElevatorEx(Timer)).synchronize_with(e)
+		for p in itertools.chain(my_passengers, enemy_passengers):
+			self.__ex[1].setdefault(p.id, PassengerEx(Timer)).synchronize_with(p)
 
 
 ## @hidden
@@ -260,8 +265,8 @@ if __name__ == '__main__':
 			api.Passenger('2',elevator,0,0,PassengerState.using_elevator,423,5,1,'',5,1),
 		]
 		strategy=Strategy(api.Debug(),'')
-		strategy.elevator_sentries[elevator.id]=ElevatorStateSentry(_Timer())
-		controller.run(strategy,elevator,[elevator],[],[],[])
+		strategy._Strategy__update([elevator],elevator.passengers,[],[])
+		controller.run(strategy,elevator,[elevator],elevator.passengers,[],[])
 
 	def test(args):
 		from strategy_utils import _run_test_func

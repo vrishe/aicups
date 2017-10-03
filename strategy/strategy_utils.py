@@ -18,13 +18,14 @@ class ElevatorControllerBase(object):
 
 class StateSentryBase(object):
 	def __init__(self, timer):
-		self.state=None
+		self.obj=None
 		self.__t0=0
 		self.__timer=timer
 
-	def synchronize_with(self, elevator):
-		if (self.state != elevator.state):
-			self.state=elevator.state
+	def synchronize_with(self, obj):
+		setattr(obj, 'ex', self)
+		if (not self.obj or self.obj.state != obj.state):
+			self.obj=obj
 			self.__t0=self.__timer.ticks
 
 	def get_ticks_passed(self):
