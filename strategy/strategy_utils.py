@@ -3,14 +3,14 @@ import time
 
 
 class ElevatorControllerBase(object):
-	controllers={}
+	__controllers={}
 	@classmethod
 	def register(cls, subcls):
-		cls.controllers[subcls.__name__]=subcls
+		cls.__controllers[subcls.__name__]=subcls
 		return subcls
 	@classmethod
 	def from_name(cls, name, **kwargs):
-		return cls.controllers[name](**kwargs)
+		return cls.__controllers[name](**kwargs)
 
 	def run(self, strategy, elevator,
 			my_elevators, my_passengers, enemy_elevators, enemy_passengers):
@@ -19,14 +19,20 @@ class ElevatorControllerBase(object):
 class StateSentryBase(object):
 	def __init__(self, timer):
 		self.obj=None
+		self.__cb={}
 		self.__t0=0
 		self.__timer=timer
+
+	def perform_on(state, action):
+		self.__cb.setdefault(state, []).append(action)
 
 	def synchronize_with(self, obj):
 		setattr(obj, 'ex', self)
 		if (not self.obj or self.obj.state != obj.state):
 			self.obj=obj
 			self.__t0=self.__timer.ticks
+			for cb in self.__cb.pop(self.obj.state, []):
+				cb(self)
 
 	def get_ticks_passed(self):
 		return self.__timer.ticks - self.__t0

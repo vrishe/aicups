@@ -14,13 +14,12 @@ if not 'timefunc' in dir():
 
 @ElevatorControllerBase.register
 class DistanceAssessmentElevatorController(ElevatorControllerBase):
-	rankings={}
+	__rankings={}
 	@staticmethod
 	def assign_ranking(elevator, ranking=None):
 		if not ranking:
-			ranking=DistanceAssessmentElevatorController.rankings.get(elevator.id)
-		if ranking:
-			setattr(elevator, 'rank', ranking)
+			ranking=DistanceAssessmentElevatorController.__rankings.get(elevator.id)
+		setattr(elevator, 'rank', ranking if ranking else 0)
 		return elevator
 
 	def run(self, strategy, elevator,
@@ -32,18 +31,18 @@ class DistanceAssessmentElevatorController(ElevatorControllerBase):
 			return
 
 		elevators_without_rank=itertools.ifilter(
-			lambda e: not 'rank' in e.__dict__, my_elevators)
+			lambda e: not e.rank, my_elevators)
 		for elevator in elevators_without_rank:
 			passenger_subject.set_elevator(elevator)
 		elevator=passenger_subject.elevator
-		rankings=DistanceAssessmentElevatorController.rankings
+		rankings=DistanceAssessmentElevatorController.__rankings
 		DistanceAssessmentElevatorController.assign_ranking(elevator,
 			rankings.setdefault(elevator.id, len(rankings)+1))
 		Timer.perform_next(
 			lambda: strategy.switch_controller_by_name(
 					elevator, 'PassengerLoadElevatorController')
-				.run(strategy, elevator, 
-					my_elevators, my_passengers, 
+				.run(strategy, elevator,
+					my_elevators, my_passengers,
 					enemy_elevators, enemy_passengers))
 
 
