@@ -5,7 +5,6 @@ from strategy_utils import EnumBase
 
 class _ElevatorConfigEnum(EnumBase):
 	def __init__(self):
-		self.__dict__['delay_enemy_invitation']=40
 		self.__dict__['delay_operation']=40
 		self.__dict__['duration_doors_close']=100
 		self.__dict__['duration_doors_open']=100
@@ -25,8 +24,11 @@ ElevatorState=_ElevatorStateEnum()
 
 class _GameConfigEnum(EnumBase):
 	def __init__(self):
+		self.__dict__['delay_enemy_invitation']=40
 		self.__dict__['delay_passenger_spawn']=20
+		self.__dict__['count_floors']=9
 		self.__dict__['passenger_delivery_floor_cost']=10
+		self.__dict__['passenger_delivery_enemy_mult']=2
 		self.__dict__['duration_passenger_spawn']=2000
 GameConfig=_GameConfigEnum()
 
